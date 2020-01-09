@@ -2,7 +2,7 @@ spring:
   datasource:
     password: mysql
     username: root
-    url: 'jdbc:mysql://localhost:3306/fornecedor'
+    url: 'jdbc:mysql://localhost:3306/fornecedor?useTimezone=true&serverTimezone=GMT'
   jpa:
     hibernate:
       ddl-auto: update
