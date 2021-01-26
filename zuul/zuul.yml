@@ -6,18 +6,18 @@ spring:
     password: ''
     port: 6379    
   datasource:
-    name: @project.name@HikariCPPool
-    url: @jdbc.url@
-    username: @jdbc.user@
-    password: @jdbc.password@
-    driver-class-name: @jdbc.driver@
+    name: Ds-Zuul
+    url: jdbc:postgresql://localhost:5432/oobj_nfe_central
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
-      pool-name: @project.name@DS
+      pool-name: Pool-Ds-Zuul
       maximumPoolSize: 10
   jpa:
-    database: @jpa.database@
-    database-platform: @jpa.dialect@
+    database: POSTGRESQL
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
     hibernate:
       ddl-auto: none
     open-in-view: true
